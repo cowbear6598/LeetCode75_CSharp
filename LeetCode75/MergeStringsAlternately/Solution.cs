@@ -9,28 +9,19 @@ namespace LeetCode75.MergeStringsAlternately
             var result       = new StringBuilder();
             var currentIndex = 0;
 
-            for (var i = 0; i < word1.Length; i++)
+            while (currentIndex < word1.Length || currentIndex < word2.Length)
             {
-                currentIndex = i;
-
-                result.Append(word1[i]);
-
-                if (i >= word2.Length)
+                if (currentIndex < word1.Length)
                 {
-                    continue;
+                    result.Append(word1[currentIndex]);
                 }
 
-                result.Append(word2[i]);
-            }
+                if (currentIndex < word2.Length)
+                {
+                    result.Append(word2[currentIndex]);
+                }
 
-            if (currentIndex > word2.Length)
-            {
-                return result.ToString();
-            }
-
-            for (var i = currentIndex + 1; i < word2.Length; i++)
-            {
-                result.Append(word2[i]);
+                currentIndex++;
             }
 
             return result.ToString();
