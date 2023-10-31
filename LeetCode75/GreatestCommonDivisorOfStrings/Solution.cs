@@ -4,6 +4,7 @@
     {
         public string GcdOfStrings(string str1, string str2)
         {
+            // This is not my solution, my solution got a bad grade, so I replace from other's solution
             if (str1 + str2 != str2 + str1)
             {
                 return "";
