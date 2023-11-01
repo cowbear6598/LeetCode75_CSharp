@@ -1,1 +1,1 @@
-## Solution's comment is my origin method
+Solution's comment is my origin method
