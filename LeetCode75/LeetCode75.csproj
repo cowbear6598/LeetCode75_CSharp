@@ -43,6 +43,8 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="CanPlaceFlowers\Solution.cs" />
+        <Compile Include="CanPlaceFlowers\Test.cs" />
         <Compile Include="GreatestCommonDivisorOfStrings\Solution.cs" />
         <Compile Include="GreatestCommonDivisorOfStrings\Test.cs" />
         <Compile Include="KidsWithTheGreatestNumberOfCandies\Solution.cs" />
