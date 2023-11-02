@@ -53,6 +53,8 @@
         <Compile Include="MergeStringsAlternately\Test.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="ReverseVowelsOfAString\Solution.cs" />
+        <Compile Include="ReverseVowelsOfAString\Test.cs" />
     </ItemGroup>
     <ItemGroup>
       <None Include="packages.config" />
