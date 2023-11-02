@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections;
 using System.Linq;
 using System.Text;
 
@@ -11,31 +11,25 @@ namespace LeetCode75.ReverseVowelsOfAString
         public string ReverseVowels(string s)
         {
             var result = new StringBuilder();
-            result.EnsureCapacity(s.Length);
-
-            var b = s.Length - 1;
+            var stacks = new Stack();
 
             for (var i = 0; i < s.Length; i++)
             {
-                var currentValue = s[i];
-
-
-                if (!vowels.Contains(currentValue) || b == 0 || i >= b)
+                if (vowels.Contains(s[i]))
                 {
-                    result.Append(currentValue);
-                    continue;
+                    stacks.Push(s[i]);
                 }
+            }
 
-                for (var j = b; j >= 0; j--)
+            for (var i = 0; i < s.Length; i++)
+            {
+                if (vowels.Contains(s[i]))
                 {
-                    var reverseValue = s[j];
-
-                    if (!vowels.Contains(reverseValue) || j < i)
-                        continue;
-
-                    result.Append(reverseValue);
-                    b = j - 1;
-                    break;
+                    result.Append(stacks.Pop());
+                }
+                else
+                {
+                    result.Append(s[i]);
                 }
             }
 
